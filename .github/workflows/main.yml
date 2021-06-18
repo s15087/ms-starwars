@@ -54,12 +54,12 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1.6
         env:
-          GITHUB_TOKEN: ${{ secrets.S15087 }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL }}
+          SONAR_TOKEN: ${{ secrets.S15087 }}
         with:
           args: >
-            -Dsonar.organization=lhalicki
-            -Dsonar.projectKey=lhalicki_ms-starwars
+            -Dsonar.s15087
+            -Dsonar.s15087_ms-starwars
           projectBaseDir: ./
           
       - name: Set up QEMU 🏗️
