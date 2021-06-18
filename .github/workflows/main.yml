@@ -55,7 +55,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v1.6
         env:
           GITHUB_TOKEN: ${{ secrets.S15087 }}
-          SONAR_TOKEN: ${{ secrets.S15087 }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
             -Dsonar.organization=lhalicki
@@ -72,8 +72,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: wisit.jfrog.io
-          username: ${{ secrets.S15087 }}
-          password: ${{ secrets.S15087 }}
+          username: ${{ secrets.JFROG_USERNAME }}
+          password: ${{ secrets.JFROG_PASSWORD }}
       
       - name: Build and push 🐳
         id: docker_build
