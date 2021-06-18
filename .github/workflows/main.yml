@@ -58,8 +58,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.S15087 }}
         with:
           args: >
-            -Dsonar.s15087
-            -Dsonar.s15087_ms-starwars
+            -Dsonar.organization=s15087
+            -Dsonar.projectKey=s15087_ms-starwars
           projectBaseDir: ./
           
       - name: Set up QEMU 🏗️
